@@ -28,7 +28,8 @@
     "event-stream": "*",
     "gulp-util": "~2.2.6",
     "knox": "",
-    "mime": "~1.2.11"
+    "mime": "~1.2.11",
+    "stream-to-queue": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "~1.14.0",
