@@ -11,6 +11,7 @@ module.exports = function (aws, options) {
   options = options || {};
 
   if (!options.delay) { options.delay = 0; }
+  if (!options.concurrency) { options.concurrency = 10; }
 
   var client = knox.createClient(aws);
   var waitTime = 0;
@@ -72,5 +73,5 @@ module.exports = function (aws, options) {
         }
         return cb(null, file);
       });
-  }, 10);
+  }, options.concurrency);
 };
